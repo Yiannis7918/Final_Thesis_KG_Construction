@@ -1,0 +1,47 @@
+# REBEL WITH ARTICLES
+#################################################################################################################################
+########################################### REBEL PROPERTY GRAPH - WITH ARTICLES ################################################
+#################################################################################################################################
+REMARK: The Below Cypher Code is used to load the REBEL property graph in Neo4j using CSV Triplets Files from GitHub
+REMARK: The Cypher code below, loads original 
+SOURCE: REBEL Graph Folder: "REBEL Final Triplets for Knowledge Graph"
+#################################################################################################################################
+
+
+LOAD CSV FROM 'https://github.com/Yiannis7918/Rebel_Triplets/blob/main/rebel_triplets_III_clean.csv?raw=true' AS row
+WITH row
+// Skip the header
+WHERE row[0] <> 'Head' 
+// Create Head Nodes and Properties
+MERGE (h:Head {name: row[0]})
+SET h.Article = row[4]    
+SET h.Paragraph = row[5]
+SET h.Sentence = row[6]      
+// Create Tail Nodes and Properties       
+MERGE (t:Tail {name: row[2]})               
+SET t.Article = row[4]    
+SET t.Paragraph = row[5]
+SET t.Sentence = row[6]
+// Create Article Nodes and Properties 
+MERGE (a:Article {name: row[4]})  
+SET a.Title = row[3]
+SET a.Content = row[7]
+WITH h, t, a, row    
+// Create Head-Tail, Article-Head and Article-Tail Relationships                       
+CALL apoc.create.relationship(h, row[1], {}, t) YIELD rel AS rel1  
+MERGE (a)-[rel2:CONTAINS]->(h) 
+MERGE (a)-[rel3:CONTAINS]->(t) 
+RETURN h, rel1, a, rel2, t, rel3
+
+
+
+
+
+
+
+
+
+
+
+
+

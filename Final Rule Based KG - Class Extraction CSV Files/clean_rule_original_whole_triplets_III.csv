@@ -1,0 +1,138 @@
+Head,Relation,Tail,Head Class,Tail Class,Title,Article
+Letter of Amendment ,CONCERNS,Amendment Updating,Budget Amendment ,Budget Amendment ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Amendment Updating,INCLUDED_IN,Letter of Amendment ,Budget Amendment ,Budget Amendment ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Letter of Amendment ,CREATED_BY,European Commission,Budget Amendment ,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Letter of Amendment ,SEND_TO ,European Council ,Budget Amendment ,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Letter of Amendment ,SEND_TO ,European Parliament ,Budget Amendment ,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Budget Amendment,CONCERNS ,Amendment Updating,Budget Amendment ,Budget Amendment ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 44  Draft amending budgets 
+Budget Amendment,CONCERNS ,Expenditure Estimates ,Budget Amendment ,Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 42  Letter of amendment to the draft budget
+Budget Amendment,SUBCLASS_OF,Draft Budget ,Budget Amendment ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 44  Draft amending budgets 
+Draft Budget ,SUBCLASS_OF,Budget ,Draft Budget,Budget,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Draft Budget ,COMPLIES_TO,Euratom Treaty,Draft Budget,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,"Article 54  Compliance with the multiannual financial framework and Decision 2014/335/EU, Euratom "
+Draft Budget ,COMPLIES_TO,Multiannual Financial Framework,Draft Budget,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,"Article 54  Compliance with the multiannual financial framework and Decision 2014/335/EU, Euratom "
+Structure ,SUBCLASS_OF,Draft Budget ,Structure ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Working Documents,SUBCLASS_OF,Structure ,Working Documents,Structure ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budget Guarantees and Common Provisioning Fund Work Document,SUBCLASS_OF,Working Documents,Working Documents,Working Documents ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budget Guarantees and Common Provisioning Fund Work Document,COMPRISED_OF,Budgetary Guarantees,Working Documents,Budget Tool,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budget Guarantees and Common Provisioning Fund Work Document,COMPRISED_OF,Common Provisioning Fund ,Working Documents,Fund,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budgetary Guarantees,RULED_BY,Basic Act,Budget Tool,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budgetary Guarantees,CONCERN,Operations,Budget Tool,E.U. Action ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Establishment Plan Work Document ,SUBCLASS_OF,Working Documents,Working Documents,Working Documents,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Establishment Plan Work Document ,COMPRISED_OF,Establishment Plan,Working Documents,Budget Tool,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Establishment Plan,CONCERNS,Personnel ,Budget Tool,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Euratom Supply Agency Staff ,COMPRISED_OF,Personnel ,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Euratom Supply Agency Staff ,INCLUDED_IN,Euratom Treaty,Human Resources,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Personnel Statistics,CONCERNS ,Personnel ,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Personnel Statistics,COMPRISED_OF,Posts,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Personnel Statistics,COMPRISED_OF,Number,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Personnel Statistics,COMPRISED_OF,Grade,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Personnel Statistics,COMPRISED_OF,Gender Balance,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Personnel Statistics,COMPRISED_OF,Administrative Units,Human Resources,Human Resources,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Instruments Work Document ,SUBCLASS_OF,Working Documents,Working Documents ,Working Documents ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Instruments Work Document ,COMPRISED_OF,Financial Tables,Working Documents ,Financial Tool ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Tables,CONCERN,Financial Instruments ,Financial Tool,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Instruments,EVALUATED_BY,Performance,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Performance,MEASURED_BY  ,Realized Investment,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Performance,MEASURED_BY  ,Private Capital,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Performance,MEASURED_BY  ,Achieved Target,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Performance,MEASURED_BY  ,Multiplier Effect,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Duration Reduction Action Plan,CONCERNS ,Financial Instruments ,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Duration Reduction Action Plan,BASED_ON  ,Annual Discharge Procedure Framework,Financial Instrument ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Administrative Expenditure ,SUBCLASS_OF,Expenditure Estimates,Expenditure Estimates ,Expenditure Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Instruments ,CONCERN,Administrative Expenditure ,Financial Instrument ,Expenditure Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Administrative Expenditure ,COMPRISED_OF,Management Fee,Expenditure Estimates ,Expenditure Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Administrative Expenditure ,COMPRISED_OF,Financial Operating Charge,Expenditure Estimates ,Expenditure Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Financial Instruments Work Document ,COMPRISED_OF,public-private partnership ,Working Documents ,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+public-private partnership ,CONCERNS,Financial Instruments ,Legal Construct,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Trust Funds Working Document  ,SUBCLASS_OF,Working Documents,Working Documents,Working Documents ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Trust Funds Working Document  ,CONCERNS,Trust Funds,Working Documents,Fund ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Union Activities,FUNDED_BY,Trust Funds,E.U. Action,Fund ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Trust Funds,FUNDED_BY ,Financial Instruments ,Fund ,Financial Instrument ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Trust Funds,FUNDED_BY ,External Donors,Fund ,Person ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Trust Funds,EVALUATED_BY ,Objectives,Fund ,E.U. Action ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Objectives,RULED_BY,Basic Act ,E.U. Action ,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Sections,SUBCLASS_OF,Structure ,Sections,Structure ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Commission Budget Section,SUBCLASS_OF,Sections,Sections,Sections,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Commission Budget Section,COMPRISED_OF,General Summary Statement ,Sections,Sections,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Expenditure Estimates,COMPRISED_OF,Payment Appropriations,Expenditure Estimates ,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Expenditure Estimates,COMPRISED_OF,Commitments,Expenditure Estimates ,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+General Summary Statement ,COMPRISED_OF,Expenditure Estimates,Sections,Expenditure Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Commission Budget Section,COMPRISED_OF,Budget Lines,Sections,Budget Tool,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Budget Lines,COMPRISED_OF,Budgetary Guarantees,Budget Tool,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Budget Lines,CONTAIN,Token Entry Pro Memoria ,Budget Tool,Budget Tool,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Commission Budget Section,COMPRISED_OF,Emergency Aid Reserve ,Sections,Reserve,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 51  Emergency Aid Reserve 
+Emergency Aid Reserve ,CONCERNS,Emergency Aid,Reserve,E.U. Action ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 51  Emergency Aid Reserve 
+Emergency Aid Reserve ,COMPRISED_OF,Negative Reserve,Reserve,Reserve,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 51  Emergency Aid Reserve 
+Emergency Aid ,CONCERNS ,Member State,E.U. Action,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 51  Emergency Aid Reserve 
+Emergency Aid ,CONCERNS,High Representative,E.U. Action,Person ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+High Representative,CONSULTS,European Commission,Person ,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Negative Reserve,COMPRISES_OF ,Payment Appropriations,Reserve,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 50  Negative reserve 
+Expenditure Estimates,COMPRISED_OF,Operational Appropriations,Expenditure Estimates,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 47  Budget nomenclature 
+Expenditure Estimates,COMPRISED_OF,Administrative Appropriations,Expenditure Estimates,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 47  Budget nomenclature 
+Payment Appropriations,SUBCLASS_OF,Appropriations,Appropriations,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Operational Appropriations,SUBCLASS_OF,Appropriations,Appropriations,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 47  Budget nomenclature 
+Administrative Appropriations,SUBCLASS_OF,Appropriations,Appropriations,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 47  Budget nomenclature 
+Appropriations,EXAMINED_BY,European Commission,Appropriations,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Appropriations,EXAMINED_BY,Union Institutions,Appropriations,European Union,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Appropriations,RULED_BY,Basic Act ,Appropriations,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 52  Presentation of the budget 
+Provision Titles Section,SUBCLASS_OF,Sections,Sections,Sections,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Provision Titles Section,COMPRISED_OF,Provisions,Sections,Provisions,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Provisions,COMPRISED_OF,Unauthorized Appropriations,Provisions,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Unauthorized Appropriations,NOT_RULED_BY,Basic Act ,Appropriations,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Provisions,COMPRISED_OF,Inadequate Appropriations,Provisions,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Inadequate Appropriations,NOT_RULED_BY,Sound Financial Management,Appropriations,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Basic Act ,BASED_ON,Article 294 TFUE,Legal Construct ,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Unauthorized Appropriations,SUBCLASS_OF,Appropriations,Appropriations,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Inadequate Appropriations,SUBCLASS_OF,Appropriations,Appropriations,Appropriations,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 49  Provisions 
+Introduction,SUBCLASS_OF,Structure ,Introduction,Structure ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Introduction,COMPRISED_OF,General Introduction,Introduction,Introduction,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+General Introduction,COMPRISED_OF,Changes in Appropriations,Introduction,E.U. Action,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Changes in Appropriations,RULED_BY,Multiannual Financial Framework ,E.U. Action,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Introduction,COMPRISED_OF,Union Institution Introduction,Introduction,Introduction ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Draft Budget ,COMPLIES_TO,Euratom treaty ,Draft Budget ,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal ,BASED_ON,Estimated Draft Budget,Draft Budget ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Estimated Draft Budget,INCLUDED_IN,Proposal ,Draft Budget ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 40  Estimated budget of the Union bodies referred to in Article 70 
+Expenditure Estimates,SUBCLASS_OF,Estimates ,Expenditure Estimates,Estimates,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Revenue Estimates,SUBCLASS_OF,Estimates ,Revenue Estimates,Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Revenue Estimates,COMPRISED_OF,Net Amounts ,Revenue Estimates,Revenue Estimates,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 48  Negative revenue 
+Net Amounts ,RULED_BY,Resource Pay Decision,Revenue Estimates,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 48  Negative revenue 
+Resource Pay Decision,CONCERNS,Euratom treaty ,E.U Action,Legal Construct ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 48  Negative revenue 
+Commission Estimates ,CONCERN,Estimates,Estimates ,Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Union Institution Estimates ,CONCERN,Estimates,Estimates ,Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Commission Estimates ,PROVIDED_BY,European Commission,Estimates ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Union Institution Estimates ,PROVIDED_BY,Union Institutions,Estimates ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Estimated Draft Budget ,DRAWN_BY,Union Institutions,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 39  Estimates of revenue and expenditure 
+Estimated Draft Budget ,BASED_ON,Union Institution Estimates ,Draft Budget ,Estimates ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 40  Estimated budget of the Union bodies referred to in Article 70 
+Estimated Draft Budget ,SEND_TO ,European Commission,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 40  Estimated budget of the Union bodies referred to in Article 70 
+Estimated Draft Budget ,SEND_TO ,European Parliament,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 40  Estimated budget of the Union bodies referred to in Article 70 
+Estimated Draft Budget ,SEND_TO ,European Council ,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 40  Estimated budget of the Union bodies referred to in Article 70 
+Draft Budget ,ESTABLISHED_BY,Proposal,Draft Budget ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal,INCLUDES,Draft Budget ,Draft Budget ,Budget,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal ,DRAWN_BY,European Commission,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal ,SEND_TO ,National Parliaments,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal ,SEND_TO ,European Parliament,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Proposal ,SEND_TO ,European Council ,Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Budget Contributions,PAID_TO,European Union,Adopted Draft Budget ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+Member State,PAY,Budget Contributions,European Union ,Adopted Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+Budget Contributions,BASED_ON,Euratom Treaty ,Adopted Draft Budget ,Legal Construct,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+Proposal ,LEADS_TO,Adopted Draft Budget ,Draft Budget ,Adopted Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+Budget Contributions,INCLUDED_IN,Adopted Draft Budget ,Adopted Draft Budget ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+Adopted Draft Budget ,SUBCLASS_OF,Draft Budget ,Adopted Draft Budget ,Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+National Parliaments,APPROVE_OF,Budget Contributions,European Union ,Adopted Draft Budget ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 41  Draft budget 
+Member State,SUBCLASS_OF,European Union ,European Union ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,Article 43  Obligations of Member States as a result of the adoption of the budget 
+European Commission,SUBCLASS_OF,European Union ,European Union ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+European Council,SUBCLASS_OF,European Union ,European Union ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+European Parliament ,SUBCLASS_OF,European Union ,European Union ,European Union ,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 41  Draft budget ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 42  Letter of amendment to the draft budget,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 43  Obligations of Member States as a result of the adoption of the budget ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 49  Provisions ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 39  Estimates of revenue and expenditure ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 40  Estimated budget of the Union bodies referred to in Article 70 ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 50  Negative reserve ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 47  Budget nomenclature ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 52  Presentation of the budget ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 44  Draft amending budgets ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,"Article 54  Compliance with the multiannual financial framework and Decision 2014/335/EU, Euratom ",Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 48  Negative revenue ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,
+TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,SUBCLASS_OF,Article 51  Emergency Aid Reserve ,Title,Article,TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET,

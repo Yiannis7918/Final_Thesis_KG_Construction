@@ -1,0 +1,82 @@
+#################################################################################################################################
+########################################### PRELIMINARY GRAPH - WHOLE TAIL ######################################################
+#############################################  NO FILTER(Full) VERSION ##########################################################
+#################################################################################################################################
+REMARK: The Below Cypher Code is used to load the preliminary graph in Neo4j using CSV Triplets Files from GitHub
+SOURCE: Preliminary Graph Folder: "triplets_neo4j_whole_tail_original"
+#################################################################################################################################
+
+LOAD CSV FROM 'https://github.com/Yiannis7918/rule_triplets_whole_original/blob/main/rule_original_whole_triplets_III.csv?raw=true' AS row
+WITH row
+// Skip the header row 
+WHERE row[0] <> 'Head' 
+
+MERGE (h:Head {name: row[0]})  // Head node
+SET h.article = row[5]         // Head - Article Property
+MERGE (t:Tail {name: row[2]})  // Tail node
+SET t.article = row[5]// Create or match the Tail node // Tail - Article Property
+SET t.noun_chunks = row[3]     // Tail - Noun Chunks Property
+MERGE (a:Article {name: row[5]})  // Article node
+SET a.title = row[4]              // Article - Title Property
+SET a.content = row[6]            // Article - Content Property
+WITH h, t, a, row                           
+CALL apoc.create.relationship(h, row[1], {}, t) YIELD rel AS rel1  // Head-Tail Relationship
+MERGE (a)-[rel2:CONTAINS]->(h) // Article-Head Relationship
+RETURN h, rel1, a, rel2, t
+
+#################################################################################################################################
+########################################### PRELIMINARY GRAPH - WHOLE TAIL ######################################################
+########################################  FILTERED(Moderate or Small) VERSION ###################################################
+#################################################################################################################################
+REMARK: The Below Cypher Code is used to load the preliminary graph in Neo4j using CSV Triplets Files from GitHub
+SOURCE: Preliminary Graph Folders: "triplets_neo4j_whole_tail" or "triplets_neo4j_whole_tail_small"
+#################################################################################################################################
+
+// Load Triplets CSV from GitHub Repository
+LOAD CSV FROM 'https://github.com/Yiannis7918/triplets_whole_tail_small/blob/main/rule_triplets_I.csv?raw=true' AS row
+WITH row
+WHERE row[0] <> 'Head' 
+
+MERGE (h:Head {name: row[0]})               // Head Node
+MERGE (t:Tail {name: row[3]})               // Tail Node
+SET t.noun_chunks = row[4]                  // Tail Property
+MERGE (a:Article {name: row[6]})            // Article Node
+WITH h, t, a, row                           
+CALL apoc.create.relationship(h, row[1], {}, t) YIELD rel AS rel1  // Head-Tail Relationship 
+MERGE (a)-[rel2:CONTAINS]->(h) //  Article-Head Relationship
+RETURN h, rel1, a, rel2, t
+
+#################################################################################################################################
+########################################### PRELIMINARY GRAPH - EXPANDED TAIL ###################################################
+########################################  FILTERED(Moderate or Small) VERSION ###################################################
+#################################################################################################################################
+REMARK: The Below Cypher Code is used to load the preliminary graph in Neo4j using CSV Triplets Files from GitHub
+SOURCE: Preliminary Graph Folders: "triplet_neo4j_expanded_tail_chunks" or "triplets_neo4j_expanded_tail_chunks_small"
+#################################################################################################################################
+
+
+LOAD CSV FROM 'https://github.com/Yiannis7918/triplets_expanded_tail_small/blob/main/rule_triplets_III_expanded.csv?raw=true' AS row
+WITH row
+// Skip the header of the csv file
+WHERE row[0] <> 'Head' 
+ 
+MERGE (h:Head {name: row[0]})               // Head node
+MERGE (t:Tail {name: row[4]})               // Tail node
+SET t.original_tail = row[3]                  // Tail - Original Tail Property
+MERGE (a:Article {name: row[6]})            // Article node
+ 
+WITH h, t, a, row
+CALL apoc.create.relationship(h, row[1], {}, t) YIELD rel AS rel1  // Head-Tail Relationship
+ 
+MERGE (a)-[rel2:CONTAINS]->(h)              // Article-Head Relationship
+ 
+RETURN h, rel1, a, rel2, t
+
+
+
+
+
+
+
+
+

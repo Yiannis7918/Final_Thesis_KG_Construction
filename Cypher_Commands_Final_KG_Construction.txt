@@ -1,0 +1,243 @@
+This Notepad contains the cypher commands to import the final rule-based knowledge graph of Title III,
+and then import and connect the relevant FIBO ontologies as found in "Final Manually Adjusted FIBO Ontologies" folder.
+
+The Ontologies are imported using Neosemantics (n10s) extension of Neo4j Desktop. 
+
+Neosemantics- > Import -> Input Format -> Upload -> RDF/XML (turtle of financial instruments ontology) -> Import Data
+
+1) Each Ontology is imported at the relevant step as described below
+2) Each step must be executed separately (in separate execution cell) in Neo4j 
+
+############################################################ STEP 1 ############################################
+
+### Setup RDF Import Configuration in Neosemantics (n10s)
+
+CALL n10s.graphconfig.init({
+	handleVocabUris: 'IGNORE',
+	handleRDFTypes: 'LABELS'
+})
+
+########################################################### STEP 2 ###########################################
+
+### Load the Final Triplets in Neo4j using "Final_Use_Case_III_Ground_Truth_KG.csv""
+
+LOAD CSV WITH HEADERS FROM 'file:///Final_Use_Case_III_Ground_Truth_KG.csv' AS row
+WITH row
+WHERE row.Head <> 'Head' 
+
+// Head node
+CALL {
+    WITH row
+    MERGE (h:Title_III {name: row.Head})  
+    WITH h, row
+    CALL apoc.create.addLabels(h, [row.Head_Class]) YIELD node  
+    SET h.article = row.Articles  
+    SET h.article_content = row.Content_Text
+    RETURN h
+}
+
+// Tail node
+CALL {
+    WITH row
+    MERGE (t:Title_III {name: row.Tail}) 
+    WITH t, row
+    CALL apoc.create.addLabels(t, [row.Tail_Class]) YIELD node   
+    SET t.article = row.Articles 
+    SET t.article_content = row.Content_Text
+    RETURN t
+}
+
+// Article node (unique nodes)
+CALL {
+    WITH row
+    MERGE (a:Article {name: row.Articles})  // Create or match the Article node
+    SET a.article_content = row.Content_Text
+    RETURN a
+}
+
+// Relationships
+WITH h, t, row,a
+CALL apoc.create.relationship(h, row.Relation, {}, t) YIELD rel AS rel1  
+REMOVE h:Title_III
+REMOVE t:Title_III
+RETURN a, h, rel1, t;
+
+
+
+########################################################### STEP 3 ##############################################
+
+Import the "EUGovernmentEntitiesAndJurisdictions_new" file in Final Manually Adjusted FIBO Ontologies Folder
+
+########################## LOAD Government Entities Ontology - "EUGovernmentEntitiesAndJurisdictions_new" File
+
+
+MATCH (n:Resource),(s:SupranationalEntity),(g:Government),(j:Jurisdiction)
+WHERE n.uri CONTAINS 'ISO3166-1'
+SET n:European_Union
+SET n:Member_State
+SET s:European_Union
+SET g:European_Union
+SET j:European_Union
+SET n.name = n.label
+SET s.name = s.label
+SET g.name = g.label
+SET j.name = j.label
+SET n.name = apoc.text.regreplace(n.uri, ".*/", "")
+REMOVE n:Resource
+REMOVE s:Resource
+REMOVE g:Resource
+REMOVE j:Resource
+REMOVE s:NamedIndividual
+REMOVE g:NamedIndividual
+REMOVE j:NamedIndividual
+RETURN n,s,g,j
+
+
+########################################################### STEP 4 ##############################################
+
+### Create new relationship between Member State Node and Countries 
+
+MATCH (n:European_Union), (me:European_Union),(m:European_Union), (en:European_Union)
+WHERE n.uri CONTAINS 'ISO3166-1' AND me.name='Member State' 
+AND m.name='European Union' AND en.name='European Union entity'
+SET me:Member_State
+WITH DISTINCT n,me,m,en 
+MERGE (n)-[:IS_INSTANCE_OF]->(me)
+MERGE (m)-[:DEFINED_BY]->(en)
+
+
+########################################################### STEP 5 ##############################################
+
+Import "financial_instruments_turtle_new" RDF File using neosemantics
+
+#############################  LOAD Financial Instrument Ontology: "financial_instruments_turtle_new" RDF File 
+
+
+MATCH (n:Class)
+SET n.name = n.label
+SET n.name = apoc.text.capitalizeAll(n.name)
+SET n:Financial_Tool
+REMOVE n:Class
+REMOVE n:Resource
+
+########################################################### STEP 6 ##############################################
+
+MATCH (ft:Financial_Tool),(f:Financial_Tool) 
+WHERE ft.name='Financial Instruments' AND f.name='Financial Instrument'
+MERGE (ft)-[:DEFINED_BY]->(f)
+
+########################################################### STEP 7 ##############################################
+
+MATCH (r:Resource {uri: "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/WrittenContract"})
+DETACH DELETE r
+
+
+########################################################### STEP 8 ##############################################
+
+
+Import "LegalCapacity_basicact" RDF File using neosemantics
+
+#############################  LOAD Legal Capacity Ontology: "LegalCapacity_basicact" RDF File 
+
+MATCH (n:Class)
+SET n:Legal_Construct
+REMOVE n:Class
+REMOVE n:Resource
+WITH n
+WHERE exists(n.label)
+SET n.name = n.label
+SET n.name = apoc.text.capitalizeAll(n.name)
+
+########################################################### STEP 9 ##############################################
+
+
+MATCH (obl:Legal_Construct), (obl_in:Legal_Construct), (con:Legal_Construct), (con_in:Legal_Construct)
+WHERE obl_in.name IN ['Public-Private Partnership', 'Commitments'] AND con_in.name IN ['Euratom Treaty', 'Multiannual Financial Framework',
+'Sound Financial Management','Basic Act']  AND obl.label='legal obligation' AND con.label='legal construct'
+WITH DISTINCT obl, obl_in, con, con_in
+MERGE (obl_in)-[:IS_INSTANCE_OF]->(obl)
+MERGE (con_in)-[:IS_INSTANCE_OF]->(con)
+
+
+
+
+
+########################################################### STEP 8 ##############################################
+
+
+Import "PaymentsAndSchedules_appropriations" RDF File using neosemantics
+
+#############################  LOAD Payments and Schedules Ontology: "PaymentsAndSchedules_appropriations" RDF File 
+
+
+
+
+MATCH (po:Class),(co:Resource),
+(du:Resource), (dut:Legal_Construct), (com:Legal_Construct), (ap:Appropriations)
+WHERE co.uri="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Commitment" AND du.uri="https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/Duty" AND dut.name="Duty" AND com.name="Commitments" AND ap.name="Appropriations"
+DETACH DELETE co
+DETACH DELETE du
+SET po: Legal_Construct
+REMOVE po: Class
+SET po.name = po.label
+SET po.name = apoc.text.capitalizeAll(po.name)
+WITH DISTINCT po,ap,dut,com
+CREATE (ap)-[:DEFINED_BY]->(po)
+CREATE (po)-[:SUBCLASS_OF]->(dut)
+CREATE (po)-[:SUBCLASS_OF]->(com)
+
+
+
+########################################################### STEP 9 ##############################################
+
+
+
+CREATE (Title_III:Title {name: "TITLE III ESTABLISHMENT AND STRUCTURE OF THE BUDGET"})
+CREATE (Fin_Reg:Legal_Construct {name: "REGULATION (EU, Euratom) 2018/1046 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL", date: "18 July 2018", about: "on the financial rules applicable to the general budget of the Union, amending Regulations (EU) No 1296/2013, (EU) No 1301/2013, (EU) No 1303/2013, (EU) No 1304/2013, (EU) No 1309/2013, (EU) No 1316/2013, (EU) No 223/2014, (EU) No 283/2014, and Decision No 541/2014/EU and repealing Regulation (EU, Euratom) No 966/2012"})
+
+########################################################### STEP 10 ##############################################
+
+MATCH (ar:Article), (ti:Title), (b:Budget), (re:Legal_Construct), (fin:Legal_Construct), (eu:European_Union)
+WHERE b.name="Budget" AND re.name="Regulation" AND fin.date="18 July 2018" AND eu.name="European Union entity" AND NOT EXISTS(ar.article)
+WITH DISTINCT ar, ti, b, re, fin, eu
+MERGE (ar)-[:SUBCLASS_OF]->(ti)
+MERGE (ti)-[:CONCERNS]->(b)
+MERGE (ti)-[:SUBCLASS_OF]->(fin)
+MERGE (fin)-[:DEFINED_BY]->(re)
+MERGE (fin)-[:CONCERNS]->(eu)
+
+########################################################### STEP 11 ##############################################
+
+MATCH (n)-[rel:subClassOf]->(m)
+MERGE (n)-[:SUBCLASS_OF]->(m)
+DELETE rel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

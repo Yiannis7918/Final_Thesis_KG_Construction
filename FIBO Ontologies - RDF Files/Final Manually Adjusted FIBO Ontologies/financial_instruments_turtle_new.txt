@@ -1,0 +1,134 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns0: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+@prefix ns1: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/CashInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "cash instrument" ;
+  skos:definition "financial instrument whose value is determined by the market and that is readily transferable (highly liquid)" ;
+  skos:scopeNote "Cash instruments can be classified into two subgroups, as securities and other cash instruments such as loans and deposits." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/CommodityInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "commodity instrument" ;
+  skos:definition "financial instrument representing an ownership interest in bulk goods, such as raw materials and primary agricultural products" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." ;
+  ns1:explanatoryNote "The value of the contract is derived from the market value of an underlying commodity or commodity index. Commodity derivatives can be physically or cash settled. Primary underliers include metals, agricultural goods and energy." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/CurrencyInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "currency instrument" ;
+  skos:definition "financial instrument used for the purposes of currency trading" ;
+  skos:example "Example currencies include UK pounds, US dollars, Euro. An example currency instrument is spot currency instrument." ;
+  skos:scopeNote "Each instance of a currency instrument has a one to one relationship with its associated currency." ;
+  ns1:adaptedFrom "Parameswaran, Sunil. Fundamentals of Financial Instruments: An Introduction to Stocks, Bonds, Foreign Exchange, and Derivatives. John Wiley and Sons (Asia) Pte. Lte., Singapore, 2011." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DebtInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "debt instrument" ;
+  skos:definition "financial instrument and credit agreement evidencing monies owed by the issuer to the holder on terms as specified" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DerivativeInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "derivative instrument" ;
+  skos:definition "financial instrument that confers on its holders certain rights or obligations, whose value is derived from one or more underlying assets" ;
+  skos:example "The three major categories of derivatives are (1) forward and future contracts, (2) options contracts, and (3) swaps. The most common underlying assets include stocks, bonds, commodities, currencies, interest rates and market indexes." ;
+  skos:scopeNote "Derivatives can be characterized by whether they are exchange-traded or traded over-the-counter (OTC)." ;
+  ns1:adaptedFrom "Parameswaran, Sunil. Fundamentals of Financial Instruments: An Introduction to Stocks, Bonds, Foreign Exchange, and Derivatives. John Wiley and Sons (Asia) Pte. Lte., Singapore, 2011." ;
+  ns1:explanatoryNote "Derivative contracts owe their availability to the existence of markets for an underlying asset or a portfolio of assets on which such agreements are written. The derivative itself is merely a contract between two or more parties. Its value is determined by fluctuations in the underlying asset. Most derivatives are characterized by high leverage." ;
+  ns1:synonym "derivative contract" .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Entitlement>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DerivativeInstrument>, <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security> ;
+  rdfs:label "entitlement" ;
+  skos:definition "financial instrument that provides the holder the privilege to subscribe to or to receive specific assets on terms specified" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." ;
+  ns1:synonym "right" .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/EquityInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security> ;
+  rdfs:label "equity instrument" ;
+  skos:definition "financial instrument representing an ownership interest in an entity or pool of assets" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/WrittenContract> ;
+  rdfs:label "financial instrument" ;
+  skos:definition "written contract that gives rise to both a financial asset of one entity and a financial liability of another entity" ;
+  skos:example "Examples of financial instruments include: cash, evidence of an ownership interest in an entity, or a contractual right to receive (or deliver) cash, or another financial instrument." ;
+  ns1:adaptedFrom "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ias-32-financial-instruments-presentation.pdf"^^xsd:anyURI ;
+  ns1:explanatoryNote "A financial instrument can be thought of as a template that defines an arrangement structure that remains to be fleshed out with terms and parameters in order to establish a specific instance of the contract." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/ExemptSecurity>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security> ;
+  rdfs:label "exempt security" ;
+  skos:definition "security that is exempt from certain regulatory rules" ;
+  skos:example "Some exemptions from the registration requirement include: private offerings to a limited number of persons or institutions; offerings of limited size; intrastate offerings; and securities of municipal, state, and federal governments." ;
+  ns1:adaptedFrom "Securities Act of 1933" ;
+  ns1:explanatoryNote "Generally, securities must be filed with the appropriate regulatory agencies in the jurisdiction in which they are sold. The registration forms companies file provide essential facts while minimizing the burden and expense of complying with the law. Not all securities must be registered, however. By exempting many small offerings from the registration process, regulators seek to foster capital formation by lowering the cost of offering securities to the public." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Future>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DerivativeInstrument> ;
+  rdfs:label "future" ;
+  skos:definition "derivative instrument that obligates the buyer to receive and the seller to deliver the assets specified at an agreed price, at some later point in time" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/NegotiableSecurity>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security> ;
+  rdfs:label "negotiable security" ;
+  skos:definition "security that can be transferred to another party" .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/NonNegotiableSecurity>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security> ;
+  rdfs:label "non-negotiable security" ;
+  skos:definition "security that is not transferable to another party" ;
+  ns1:explanatoryNote "Certain securities that can be redeemed by the issuer may not be 'negotiable', such as savings bonds and certificates of deposit." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Option>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DerivativeInstrument> ;
+  rdfs:label "option" ;
+  skos:definition "derivative instrument that grants to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time period in the future" ;
+  ns1:adaptedFrom "ISO 10962, Securities and related financial instruments - Classification of Financial Instruments (CFI code), Fourth edition, 2019-10." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/PromissoryNote>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/DebtInstrument> ;
+  rdfs:label "promissory note" ;
+  skos:definition "debt instrument that is a written promise by one party to another that commits that party to pay a specified sum on demand or within a specified time frame under specified terms" ;
+  ns1:explanatoryNote "Promissory notes are generally fully fungible. They may or may not be negotiable." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/Security>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "security" ;
+  skos:definition "financial instrument that can be bought or sold" ;
+  ns1:adaptedFrom "Securities Exchange Act of 1934, as amended 12 August 2012" ;
+  ns1:explanatoryNote "A security can be any note, stock, treasury stock, security future, security-based swap, bond, debenture,certificate of interest or participation in any profit-sharing agreement or in any oil, gas, or other mineral royalty or lease, any collateral-trust certificate, preorganization certificate or subscription, transferable share, investment contract, voting-trust certificate, certificate of deposit for a security, any put, call, straddle, option, or privilege on any security, certificate of deposit, or group or index of securities (including any interest therein or based on the value thereof), or any put, call, straddle, option, or privilege entered into on a national securities exchange relating to foreign currency, or in general, any instrument commonly known as a security, or any certificate of interest or participation in, temporary or interim certificate for, receipt for, or warrant or right to subscribe to or purchase, any of the foregoing; but shall not include currency or any note, draft, bill of exchange, or bankers' acceptance which has a maturity at the time of issuance of not exceeding nine months, exclusive of days of grace, or any renewal thereof the maturity of which is likewise limited.", "In the U.S., the Supreme Court has adopted a flexible and liberal approach in determining what constitutes a security. In its famous decision of SEC v. W.J. Howey Co., 328 U.S. 293, 90 L.Ed. 1244, 66 S.Ct. 1100 (1946), the Court held that land sales contracts for citrus groves in Florida, coupled with warranty deeds for the land and a contract to service the land, were 'investment contracts' and thus securities. The Court stated that [a]n investment contract for purposes of the Securities Act means a contract, transaction or scheme whereby a person invests his money in a common enterprise and is led to expect profits solely from the efforts of the promoter or a third party. 66 S.Ct. at 1103. According to the Court, it is immaterial whether the shares in the enterprise are evidenced by formal certificates or by nominal interests in the physical assets employed in the enterprise. 66 S.Ct. at 1104.", "Some securities may be traded over the counter, or through an exchange, or via some other trading venue such as an electronic trading platform.", "Whether a contract or other economic right is a security essentially depends on whether the holder of the contract is acting as an investor who seeks financial benefits based on the work of a promoter or a third party." .
+
+<https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/SpotContract>
+  a owl:Class ;
+  rdfs:subClassOf <https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/FinancialInstrument> ;
+  rdfs:label "spot contract"@en ;
+  skos:definition "financial instrument that settles for immediate delivery on a specified date"@en ;
+  ns1:explanatoryNote "A spot transaction is a transaction in which some goods or instrument(s) are exchanged for some other goods or instruments, including currency, with no future delivery provision, i.e., within the minimum number of days possible. Examples include currency spots and commodity spot transactions, whose settlement convention is determined by the relevant market."@en .
+
+
