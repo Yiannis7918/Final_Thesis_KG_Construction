@@ -1,6 +1,10 @@
 # About
 This repository contains the implementation code and the intermediate and final results, related to the Master's Thesis: "Constructing a Knowledge Graph for EU Financial Regulations". This Thesis is a graduation prerequisite of the Master of Statistics & Data Science of KU Leuven, Leuven, Belgium. 
 
+# Import the Final Rule-Based Knowledge Graph for Title III: Establishment and Structure of the Budget of the Financial Regulations in Neo4j Graph Database System
+
+
+
 
 # References 
 
