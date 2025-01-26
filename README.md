@@ -4,6 +4,10 @@ This repository contains the implementation code and the intermediate and final 
 # Import the Final Rule-Based Knowledge Graph in Neo4j
 
 The simple and fast instructions to load the Title III: Establishment and Structure of the Budget of the Financial Regulations Knowledge Graph are located in the "Import Title III Rule-Based KG in Neo4j" folder of this repository
+
+# How to Interpret and Read this Repository 
+
+1) This repository contains the implementation code around knowledge grah construction. 
  
 
 
